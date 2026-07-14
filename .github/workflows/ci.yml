@@ -42,7 +42,10 @@ jobs:
       working-directory: ./frontend
     - name: Run unit tests
       run: npm test -- --watch=false --browsers=ChromeHeadlessNoSandbox
+      working-directory: ./frontend
     - name: Build production application
       run: npm run build -- --configuration=production
+      working-directory: ./frontend
     - name: Security audit
       run: npm audit --audit-level=high
+      working-directory: ./frontend
